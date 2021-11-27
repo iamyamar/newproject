@@ -1,6 +1,7 @@
 import product1 from "../../images/proucts/product1(1).jpg";
 import product2 from "../../images/proucts/product2 (1).jpeg";
 import product3 from "../../images/proucts/product3(1).jpg";
+import dummy from "../../images/proucts/dummy.png";
 
 export const productPageProductData = [
   {
@@ -17,7 +18,8 @@ export const productPageProductData = [
     sold: true,
     reatingCount: 4,
     brand: "Toyoto",
-  availability:true
+    availability: true,
+    pageNo: 1
   },
   {
     productTitle: "Sushila Autotechnik- SATuned",
@@ -27,57 +29,8 @@ export const productPageProductData = [
     price: "45000",
     image: product2,
     ratings: 5,
-    reatingCount: 4
-  },
-  {id: "1111111",
-    productTitle: "Sushila Autotechnik- SATuned",
-    partsBrand: "Mercedes Benz",
-    carVariant: "GLC class, GLE class",
-    model: "x253, c292",
-    price: "30000",
-    image: product1,
-    ratings: 4,
-    discount: 35,
-    newPrice: "100.00",
-    sold: true,
-    reatingCount: 4
-  },
-
-  {
-    productTitle: "Sushila Autotechnik- SATuned",
-    carBrand: "BMW",
-    id: "32302457717",
-    model: "G30, G32, G11, G02",
-    price: "45000",
-    image: product2,
-    ratings: 5,
-    reatingCount: 4
-  },
-  {
-    productTitle: "Sushila Autotechnik- SATuned",
-    brand: "Porsche",
-    id: "POR_718_FLIP",
-    parts: "Carbon Fiber",
-    price: "120000",
-    image: product3,
-    ratings: 0,
-    discount: 35,
-    newPrice: "100.00",
-    newProduct: true,
-    reatingCount: 4
-  },
-  {
-    productTitle: "Sushila Autotechnik- SATuned",
-    brand: "Porsche",
-    id: "POR_718_FLIP",
-    parts: "Carbon Fiber",
-    price: "120000",
-    image: product3,
-    ratings: 0,
-    discount: 35,
-    newPrice: "100.00",
-    newProduct: true,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 1
   },
   {
     id: "1111111",
@@ -91,9 +44,9 @@ export const productPageProductData = [
     discount: 35,
     newPrice: "100.00",
     sold: true,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 1
   },
-
   {
     productTitle: "Sushila Autotechnik- SATuned",
     carBrand: "BMW",
@@ -102,7 +55,20 @@ export const productPageProductData = [
     price: "45000",
     image: product2,
     ratings: 5,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 1
+  },
+
+  {
+    productTitle: "Dummy Data",
+    carBrand: "Dummy",
+    id: "32302457717",
+    model: "G30, G32, G11, G02",
+    price: "45000",
+    image: dummy,
+    ratings: 5,
+    reatingCount: 4,
+    pageNo: 1
   },
   {
     productTitle: "Sushila Autotechnik- SATuned",
@@ -115,7 +81,8 @@ export const productPageProductData = [
     discount: 35,
     newPrice: "100.00",
     newProduct: true,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 1
   },
   {
     productTitle: "Sushila Autotechnik- SATuned",
@@ -128,9 +95,11 @@ export const productPageProductData = [
     discount: 35,
     newPrice: "100.00",
     newProduct: true,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 2
   },
-  {id: "1111111",
+  {
+    id: "1111111",
     productTitle: "Sushila Autotechnik- SATuned",
     partsBrand: "Mercedes Benz",
     carVariant: "GLC class, GLE class",
@@ -141,30 +110,8 @@ export const productPageProductData = [
     discount: 35,
     newPrice: "100.00",
     sold: true,
-    reatingCount: 4
-  },
-  {
-    productTitle: "Sushila Autotechnik- SATuned",
-    carBrand: "BMW",
-    id: "32302457717",
-    model: "G30, G32, G11, G02",
-    price: "45000",
-    image: product2,
-    ratings: 5,
-    reatingCount: 4
-  },
-  {id: "1111111",
-    productTitle: "Sushila Autotechnik- SATuned",
-    partsBrand: "Mercedes Benz",
-    carVariant: "GLC class, GLE class",
-    model: "x253, c292",
-    price: "30000",
-    image: product1,
-    ratings: 4,
-    discount: 35,
-    newPrice: "100.00",
-    sold: true,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 2
   },
 
   {
@@ -175,7 +122,8 @@ export const productPageProductData = [
     price: "45000",
     image: product2,
     ratings: 5,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 2
   },
   {
     productTitle: "Sushila Autotechnik- SATuned",
@@ -188,6 +136,111 @@ export const productPageProductData = [
     discount: 35,
     newPrice: "100.00",
     newProduct: true,
-    reatingCount: 4
+    reatingCount: 4,
+    pageNo: 2
+  },
+  {
+    productTitle: "Sushila Autotechnik- SATuned",
+    brand: "Porsche",
+    id: "POR_718_FLIP",
+    parts: "Carbon Fiber",
+    price: "120000",
+    image: product3,
+    ratings: 0,
+    discount: 35,
+    newPrice: "100.00",
+    newProduct: true,
+    reatingCount: 4,
+    pageNo: 2
+  },
+  {
+    productTitle: "Dummy Data",
+    carBrand: "Dummy",
+    id: "32302457717",
+    model: "G30, G32, G11, G02",
+    price: "45000",
+    image: dummy,
+    ratings: 5,
+    reatingCount: 4,
+    pageNo: 2
+  },
+  {
+    id: "1111111",
+    productTitle: "Sushila Autotechnik- SATuned",
+    partsBrand: "Mercedes Benz",
+    carVariant: "GLC class, GLE class",
+    model: "x253, c292",
+    price: "30000",
+    image: product1,
+    ratings: 4,
+    discount: 35,
+    newPrice: "100.00",
+    sold: true,
+    reatingCount: 4,
+    pageNo: 3
+  },
+  {
+    productTitle: "Dummy Data",
+    carBrand: "Dummy",
+    id: "32302457717",
+    model: "G30, G32, G11, G02",
+    price: "45000",
+    image: dummy,
+    ratings: 5,
+    reatingCount: 4,
+    pageNo: 3
+  },
+  {
+    productTitle: "Sushila Autotechnik- SATuned",
+    carBrand: "BMW",
+    id: "32302457717",
+    model: "G30, G32, G11, G02",
+    price: "45000",
+    image: product2,
+    ratings: 5,
+    reatingCount: 4,
+    pageNo: 3
+  },
+  {
+    id: "1111111",
+    productTitle: "Sushila Autotechnik- SATuned",
+    partsBrand: "Mercedes Benz",
+    carVariant: "GLC class, GLE class",
+    model: "x253, c292",
+    price: "30000",
+    image: product1,
+    ratings: 4,
+    discount: 35,
+    newPrice: "100.00",
+    sold: true,
+    reatingCount: 4,
+    pageNo: 3
+  },
+
+  {
+    productTitle: "Sushila Autotechnik- SATuned",
+    carBrand: "BMW",
+    id: "32302457717",
+    model: "G30, G32, G11, G02",
+    price: "45000",
+    image: product2,
+    ratings: 5,
+    reatingCount: 4,
+    pageNo: 3
+  },
+ 
+  {
+    productTitle: "Sushila Autotechnik- SATuned",
+    brand: "Porsche",
+    id: "POR_718_FLIP",
+    parts: "Carbon Fiber",
+    price: "120000",
+    image: product3,
+    ratings: 0,
+    discount: 35,
+    newPrice: "100.00",
+    newProduct: true,
+    reatingCount: 4,
+    pageNo: 3
   },
 ];

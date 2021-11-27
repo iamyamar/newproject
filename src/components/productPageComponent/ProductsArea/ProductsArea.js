@@ -3,12 +3,17 @@ import { productPageProductData } from "./../../Data/ProductPageProductsData";
 import ProductCard from "./../../commonComponent/ProductCard/ProductCard";
 import ProductToolBar from "../ProductToolBar/ProductToolBar";
 
-const ProductsArea = () => {
+const ProductsArea = (props) => {
+
+
+
   return (
     <div className="container">
       <ProductToolBar />
       <div className="row">
-        {productPageProductData.slice(0, 15).map((product, index) => (
+        {productPageProductData.filter((element)=>{
+          return (element.pageNo === props.page)
+        }).map((product, index) => (
           <div key={index} className="col-md-4 col-6 d-flex mb-4">
             <ProductCard product={product} productPage={true} />
           </div>
