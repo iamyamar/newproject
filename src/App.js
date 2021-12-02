@@ -20,6 +20,7 @@ import Services from "./pages/Services/Services";
 import About from "./pages/AboutUS/About";
 import SingleNewsPage from "./pages/NewsPage/SingleNewsPage";
 import Gallery from "./pages/Gallery/Gallery.js";
+import Carproducts from "./pages/Carproducts/Carproducts"
 
 export const CardContext = createContext();
 
@@ -34,6 +35,9 @@ function App() {
             <Route path="/" exact>
               <HomePage />
             </Route>
+	    <Route path="/carproducts" exact>
+	      <Carproducts />
+	    </Route>
             <Route path="/products" exact>
               <ProductPage />
             </Route>
