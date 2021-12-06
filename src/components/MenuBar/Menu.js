@@ -10,8 +10,8 @@ import { SmallMenu } from "./SmallMenu";
 
 const Menu = ({ bg }) => {
   const [menuList] = useState(menus);
-  const [showSearchBox, setShowSearchBox] = useState(false);
-  const [searchtext, setSearchText] = useState("");
+  // const [showSearchBox, setShowSearchBox] = useState(false);
+  // const [searchtext, setSearchText] = useState("");
 
   // const [cardProductLength] = useContext(CardContext);
 
@@ -62,7 +62,7 @@ const Menu = ({ bg }) => {
           </Nav>
           <div className="d-flex pb-3 pb-md-0">
             <div className={style.icon}>
-              <div
+              {/* <div
                 className={`${style.serach_wrapepr} d-flex align-items-center`}
               >
                 <input
@@ -78,7 +78,7 @@ const Menu = ({ bg }) => {
                 ) : (
                   <MdSearch onClick={() => setShowSearchBox(true)} />
                 )}
-              </div>
+              </div> */}
               <MdMenu />
               <SmallMenu />  
             </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef} from "react";
 import { CardContext } from "../../App";
 import { Badge } from "react-bootstrap";
 import { MdShoppingCart } from "react-icons/md";
@@ -11,6 +11,8 @@ import { Alert } from "react-bootstrap";
 
 export const SmallMenu = () => {
   //   const [cardProductLength] = useContext(CardContext);
+
+
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setIsActive(!isActive);
@@ -83,12 +85,17 @@ export const SmallMenu = () => {
               style={{ display: "block", border: "none", padding: "20px 20px" }}
             >
               <Link to="/cart">
-                <button className="bgHover bg-white text-black px-5 py-2 rounded-pill border-0">
+                <button style={{'width':"20px",display:"flex",justifyContent:"center"}} className="bgHover bg-white text-black px-5 py-2 rounded-pill border-0">
                   Cart
                 </button>
               </Link>
+              <button style={{'width':"20px",display:"flex",justifyContent:"center"}}  className="bgHover bg-white text-black px-5 py-2 rounded-pill border-0" onClick={()=>{
+                localStorage.clear();
+              }}     >
+                  Clear
+                </button>
               <Link to="/check-out">
-                <button className="bgHover bg-white text-black px-5 py-2 rounded-pill border-0">
+                <button style={{'width':"20px",display:"flex",justifyContent:"center"}} className="bgHover bg-white text-black px-5 py-2 rounded-pill border-0">
                   Checkout
                 </button>
               </Link>

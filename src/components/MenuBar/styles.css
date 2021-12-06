@@ -64,10 +64,13 @@
     color: #333333;
     padding: 15px 20px;
     display: block;
+    
   }
   
 .bgHover{
     transition: all 0.2s linear;
+    
+    
 }
 .bgHover:hover{
       background-color: red !important;
