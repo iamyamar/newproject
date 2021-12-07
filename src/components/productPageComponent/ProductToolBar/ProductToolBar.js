@@ -1,8 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import style from "./ProductToolBar.module.css";
 import { IoListOutline, IoApps } from "react-icons/io5";
+import { MdSearch, MdMenu, MdClose } from "react-icons/md";
 
-const ProductToolBar = () => {
+const ProductToolBar = (props) => {
+
+ 
+
   return (
     <div>
       <div>
@@ -18,9 +22,32 @@ const ProductToolBar = () => {
           </div>
           <div className={style.right_side}>
             <div className={style.show_item_wrapper}>
+             
+              {/* Search Bar */}
+              <div
+                className={`${style.serach_wrapepr} d-flex align-items-center`}
+              >
+                <input
+                  type="text"
+                  value={props.searchtext}
+                  onChange={(e) => props.setSearchText(e.target.value)}
+                  className={`${style.search_box} ${props.showSearchBox ? "d-blcok" : "d-none"
+                    }`}
+                />
+                {props.showSearchBox ? (
+                  <MdClose style={{width:"100px",height:"25px"}} onClick={() => props.setShowSearchBox(false)} />
+                 
+                ) : (
+                  <MdSearch style={{width:"100px",height:"25px"}} onClick={() => props.setShowSearchBox(true)} />
+                )}
+              </div>
+
+
               <label className={style.show_item_label} htmlFor="show_item">
                 Show:
               </label>
+
+
               <select
                 id="show_item"
                 className={style.show_item}
