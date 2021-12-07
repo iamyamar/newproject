@@ -1,0 +1,196 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ 
+ #cardetailsid{
+    background:rgb(29, 36, 39);
+ }
+ 
+ .container{
+    width: 80%;
+    margin: 0 auto;
+ }
+ 
+ .container .main-heading{
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin: 2rem 0;
+    text-align: center;
+    color: rgb(238, 79, 79);
+ }
+ 
+ .container .filtering-container{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+ }
+ .filtering-container select{
+    margin: 0 1rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+ }
+ 
+ .container2{
+    margin-top: 3rem;
+ }
+ .container2 .filter-heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    font-family: sans-serif;
+    color: rgb(107, 187, 187);
+ }
+ .container2 .filtering-result-container{
+    margin-top: 2rem;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) , url("https://www.wallpaperup.com/uploads/wallpapers/2014/02/21/264153/73a360c68042ae98f65d8a49936ea78c-1000.jpg");
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ .filtering-result-container .default-car-brand{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem;
+ }
+ .default-car-brand .brand{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    border: 2px solid rgb(255, 0, 0);
+    padding: 1rem 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+ }
+ .default-car-brand .brand:hover{
+    background-color: rgb(197, 14, 14);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.95);
+ }
+ .filtering-result-container .one-in-three-box{
+    padding: 2.5rem 0.5rem;
+ }
+ .one-in-three-box .modelsOfBrand{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+ }
+ .one-in-three-box .car-brand-block{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+ }
+ .car{
+    flex-basis: 18%;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+ }
+ .car:hover{
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0 0.6rem 0.2rem rgb(156, 174, 182);
+ 
+ }
+ .car img{
+    width: 100%;
+    display: block;
+ }
+ .car h4{
+    font-family: sans-serif;
+    color: rgb(211, 174, 174);
+    margin-top: 1rem;
+    text-align: center;
+ }
+ 
+ .one-in-three-box .itemsOfModel1{
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+ .one-in-three-box .itemsOfModel3{
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+ .one-in-three-box .productsEachYear{
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+ 
+ .one-in-three-box .product{
+    flex-basis: 18%;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+ }
+ .one-in-three-box .product:hover{
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0 0.6rem 0.2rem rgb(156, 174, 182);
+ }
+ 
+ .product .productImg-container{
+    width: 60%;
+ }
+ .productImg-container img{
+    display: block;
+    width: 100%;
+ }
+ 
+ .product .serial-product{
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: rgb(176, 179, 161);
+ }
+ .serial-product h4{
+    margin-top: 0.5rem;
+ }
+ 
+ .filtering-result-container .product-container{
+    display: none;
+    justify-content: space-between;
+    padding: 2rem;
+ }
+ 
+ .product-container .product-details-box{
+    flex-basis: 35%;
+    font-family: sans-serif;
+    color: rgb(233, 232, 232);
+ }
+ .product-details-box .product-serial-box{
+    color:rgb(245, 216, 216);
+ }
+ .product-serial-box p{
+    margin-top: 0.5rem;
+ }
+ 
+ .product-details-box hr{
+    margin: 2rem 0;
+ }
+ .product-details-box .value-box{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+ }
+ .value-box h3{
+    color: rgb(173, 205, 220);
+    margin-bottom: 0.5rem;
+ }
+ .product-container .product-img-box{
+    flex-basis: 50%;
+ }
+ .product-img-box img{
+    width: 100%;
+    opacity: 0.85;
+    border-radius: 0.3rem;
+ } 

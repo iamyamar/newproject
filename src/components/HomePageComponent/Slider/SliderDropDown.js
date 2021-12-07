@@ -1,6 +1,8 @@
 import React from 'react';
 import style from "./Slider.module.css"
 import {Form} from "react-bootstrap"
+import {data } from '../../../pages/Carproducts/carproductsdata' 
+import  { Link } from "react-router-dom"
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -21,7 +23,21 @@ const SliderDropDown = () => {
               </Form.Select>
               <Form.Select className={"text-uppercase"}>
                 <option>Model</option>
-                <option>Default select</option>
+                {
+
+                  data.map(y => {
+                    return(
+        
+                    <React.Fragment>
+                    {data.map((item, i) => (
+                      <li key={i}>
+                        <option>{item.id}</option>
+                      </li>
+                      ))}
+                    </React.Fragment>
+                    )
+                  })
+                  }
               </Form.Select>
               <Form.Select className={"text-uppercase"}>
                 <option>Year</option>
@@ -29,9 +45,13 @@ const SliderDropDown = () => {
               </Form.Select>
             </div>
             <div>
-              <MdKeyboardArrowRight
+            <Link
+            to="/carproducts" >
+            <MdKeyboardArrowRight
+
                 className={`${style.arrow} text-white mt-3 mt-md-0`}
-              />
+                />
+                </Link>
             </div>
           </div>
         </div>
