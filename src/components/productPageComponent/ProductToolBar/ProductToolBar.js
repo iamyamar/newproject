@@ -5,7 +5,32 @@ import { MdSearch, MdMenu, MdClose } from "react-icons/md";
 
 const ProductToolBar = (props) => {
 
- 
+  const handleChanges = (e) => {
+    let value = e.target.value;
+    console.log(value)
+    if(value == "price-ascending")
+    {
+      props.setSortbyprice(0)
+    }
+    else if(value == "price-descending")
+    {
+      props.setSortbyprice(1)  
+    }
+    else if(value == "title-descending")
+    {
+        props.setSortbyname(1)
+    }
+    else if(value == "title-ascending")
+    {
+        props.setSortbyname(0)
+    }
+    else if(value == "Reset Filters")
+    {
+      props.setSortbyname(99)
+      props.setSortbyprice(99)
+    }
+}
+
 
   return (
     <div>
@@ -62,7 +87,8 @@ const ProductToolBar = (props) => {
               <label className={style.short_by_label} htmlFor="short_by">
                 Sort by:
               </label>
-              <select id="short_by" className={style.short_by} name="short_by">
+              <select id="short_by" className={style.short_by} name="short_by" onChange={handleChanges}>
+                <option value="Reset Filters">Reset Filter</option>
                 <option value="title-ascending">Alphabetically, A-Z</option>
                 <option value="title-descending">Alphabetically, Z-A</option>
                 <option value="price-ascending">Price, low to high</option>
