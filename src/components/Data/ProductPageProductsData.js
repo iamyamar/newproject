@@ -268,7 +268,7 @@ export const productPageProductData = [
     id : 1,
     image: "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/EXTERIOR/9000002_alt.jpg",
     ratings: 4,
-    discount: 35,
+    discount: 30,
     newPrice: "14000.00",
     sold: true,
     reatingCount: 4,
@@ -297,8 +297,8 @@ export const productPageProductData = [
     price: "30000",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-0sNr1QR5jNL8ZjWa4Udq7vD2-dbCtGxmvpfN_Ao5yMXWl7QlmfpVH-tX5PSXLaXRPi0&usqp=CAU",
     ratings: 4,
-    discount: 35,
-    newPrice: "19500.00",
+    discount: 15,
+    newPrice: "25500.00",
     sold: true,
     reatingCount: 4,
     pageNo: 1
@@ -365,8 +365,8 @@ export const productPageProductData = [
     price: "10000",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2wdpeGrKTvlnw_meH05HRP7uH06uMN-HseAPAaO8iCuhs01CYUwC9Z3kj-LNdzpNGTqA&usqp=CAU",
     ratings: 4,
-    discount: 35,
-    newPrice: "6500.00",
+    discount: 70,
+    newPrice: "3000.00",
     sold: true,
     reatingCount: 4,
     pageNo: 2
@@ -392,8 +392,8 @@ export const productPageProductData = [
     price: "150000",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBrPhmx0O9hZMGyZMVDcN7Che9qDlANyJXGecBvQwI2zCscb7mm0anrXicxxjEsM-MIE8&usqp=CAU",
     ratings: 0,
-    discount: 35,
-    newPrice: "97500.00",
+    discount: 40,
+    newPrice: "90000.00",
     newProduct: true,
     reatingCount: 4,
     pageNo: 2
@@ -507,3 +507,4 @@ export const productPageProductData = [
     pageNo: 3
   },
 ];
+
