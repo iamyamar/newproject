@@ -1,7 +1,8 @@
 import React,{useState} from "react";
 import style from "./ProductToolBar.module.css";
-import { IoListOutline, IoApps } from "react-icons/io5";
+import { IoListOutline, IoApps, IoContractOutline } from "react-icons/io5";
 import { MdSearch, MdMenu, MdClose } from "react-icons/md";
+import { useEffect } from "react";
 
 const ProductToolBar = (props) => {
 
@@ -32,6 +33,72 @@ const ProductToolBar = (props) => {
 }
 
 
+const handleChangesExtra = (e) => {
+  let value = e.target.value;
+  console.log(value)
+  if(value == "All Discounted products")
+  {
+    props.setDiscount(1);
+  }
+  else if(value == "Additional Filters - Reset")
+  {
+    props.setDiscount(99);
+    props.setDis20(99);
+    props.setDis50(99);
+    props.setDis50plus(99);
+  }
+  else if(value == "twenty")
+  {
+    props.setDiscount(1);
+    props.setDis20(1);
+    props.setDis50(99);
+    props.setDis50plus(99);
+    console.log("setDis20 set to 1")
+  }
+  else if(value == "fifty")
+  {
+    props.setDiscount(1);
+    props.setDis20(99);
+    props.setDis50(1);
+    props.setDis50plus(99);
+    console.log("setDis50 set to 1")
+  }
+  else if(value == "fiftyplus")
+  {
+
+    props.setDiscount(1);
+    props.setDis20(99);
+    props.setDis50(99);
+    props.setDis50plus(1);
+    console.log("setDis50plus set to 1")
+  }
+}
+
+let page = props.page
+
+const [ start,setStart] = useState(1)
+const [ end,setEnd] = useState(6)
+
+
+useEffect(() => {
+  if( page == 1)
+  {
+    setStart(1)
+    setEnd(6)
+  }
+  else if( page == 2)
+  {
+    setStart(7)
+    setEnd(12)
+  }
+  else if( page == 3)
+  {
+    setStart(13)
+    setEnd(18)
+  }
+  console.log(page)
+}, [page])
+
   return (
     <div>
       <div>
@@ -43,7 +110,7 @@ const ProductToolBar = (props) => {
             <button className={`${style.ioapps_button} me-lg-4`}>
               <IoApps />
             </button>
-            <p className={style.show_item_count}>Showing 1 to 9 of 37 items</p>
+            <p className={style.show_item_count}>Showing {start} to {end} of 18 items</p>
           </div>
           <div className={style.right_side}>
             <div className={style.show_item_wrapper}>
@@ -67,21 +134,6 @@ const ProductToolBar = (props) => {
                 )}
               </div>
 
-
-              <label className={style.show_item_label} htmlFor="show_item">
-                Show:
-              </label>
-
-
-              <select
-                id="show_item"
-                className={style.show_item}
-                name="show_item"
-              >
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-              </select>
             </div>
             <div className={style.short_by_wrapper}>
               <label className={style.short_by_label} htmlFor="short_by">
@@ -94,6 +146,13 @@ const ProductToolBar = (props) => {
                 <option value="price-ascending">Price, low to high</option>
                 <option value="price-descending">Price, high to low</option>
               </select>
+              <select id="short_by" className={style.short_by} onChange={handleChangesExtra}>
+                  <option>Additional Filters - Reset</option>
+                  <option>All Discounted products</option>
+                  <option value="twenty">00%  {'<'} Discount {'<'} 20%</option>
+                  <option value="fifty">20% {'<'} Discount {'<'} 50%</option>
+                  <option value="fiftyplus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discount&nbsp;{'>'}&nbsp;50%</option>
+              </select>
             </div>
           </div>
         </div>
@@ -103,3 +162,4 @@ const ProductToolBar = (props) => {
 };
 
 export default ProductToolBar;
+
